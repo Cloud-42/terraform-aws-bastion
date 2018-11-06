@@ -43,7 +43,7 @@ variable "key_name" {
 }
 
 variable "enable_monitoring" {
-  description = "enables / disables detailed monitoring"
+  description = "Enables / disables detailed monitoring"
   default     = "false"
 }
 
@@ -62,7 +62,7 @@ variable "volume_type" {
 }
 
 variable "orchestration" {
-  description = "link to orchestration used for the build, eg link to git repository"
+  description = "Link to orchestration used for the build, eg link to git repository"
 }
 
 variable "max_size" {
