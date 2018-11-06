@@ -11,3 +11,7 @@ Optional items:
 
  * ASG action notifications.
 
+Current supported Operating Systems:
+
+ * Ubuntu 16
+
