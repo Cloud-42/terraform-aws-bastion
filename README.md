@@ -5,6 +5,7 @@ Standard items created:
 
  * Bastion Server.
  * Auto scaling group "ASG" to create the Bastion Server.
+ * Standard tags added to resources: Name, environment, orchestration.
 
 Optional items:
 
