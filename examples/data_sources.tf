@@ -15,4 +15,3 @@ data "aws_ami" "ubuntuserver_ami_useast1" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
   }
 }
-
