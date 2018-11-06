@@ -35,4 +35,3 @@ data "template_file" "user_data" {
     hosted_zone_id  = "${var.hosted_zone_id}"
   }
 }
-

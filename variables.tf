@@ -14,7 +14,7 @@ variable "hosted_zone_id" {
 
 variable "health_check_grace_period" {
   description = "Health check Grace period for ASG"
-  default = "120"
+  default     = "120"
 }
 
 variable "health_check_type" {
@@ -26,7 +26,7 @@ variable "hostname" {
 }
 
 variable "dns_domain_name" {
- description = "DNS domain name the host will be part of. eg dev.domain.io"
+  description = "DNS domain name the host will be part of. eg dev.domain.io"
 }
 
 variable "ebs_optimized" {
@@ -41,7 +41,6 @@ variable "environment" {
 variable "key_name" {
   description = "Initial Key used to build the host"
 }
-
 
 variable "enable_monitoring" {
   description = "enables / disables detailed monitoring"
@@ -68,22 +67,22 @@ variable "orchestration" {
 
 variable "max_size" {
   description = "ASG maximum size"
-  default = "1"
+  default     = "1"
 }
 
 variable "min_size" {
   description = "ASG minimum size"
-  default = "1"
+  default     = "1"
 }
 
 variable "desired_capacity" {
   description = "ASG desired size"
-  default = "1"
+  default     = "1"
 }
 
 variable "volume_size" {
   description = "ec2 Volume size"
-  default = "30"
+  default     = "30"
 }
 
 variable "security_groups" {
@@ -93,6 +92,3 @@ variable "security_groups" {
 variable "vpc_zone_identifier" {
   description = "A list of subnet IDs to launch resources in"
 }
-
-
-
