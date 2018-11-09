@@ -20,3 +20,6 @@ Creates an auto-scaled, self healing, Bastion server for use in AWS. The Bastion
  * It is assumed the Bastion will be launched in a public subnet.
  * A VPC is already in place
 
+##### Using the module
+
+ * This module is usually called from a top level repository. Within this calling module the AWS provider needs to be defined. See provider.tf in the examples directory.
