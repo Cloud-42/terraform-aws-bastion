@@ -18,5 +18,5 @@ Creates an auto-scaled, self healing, Bastion server for use in AWS. The Bastion
 ##### Assumptions:
 
  * It is assumed the Bastion will be launched in a public subnet.
-
+ * A VPC is already in place
 
