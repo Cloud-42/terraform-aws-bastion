@@ -23,6 +23,6 @@ hostnamectl set-hostname ${hostname}.${dns_domain_name}
 #
 # Patch host
 #
-sudo apt-get update -y
-sudo apt-get install unattended-upgrades -y
+apt-get update -y
+apt-get install unattended-upgrades -y
 
