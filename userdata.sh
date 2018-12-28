@@ -25,4 +25,4 @@ hostnamectl set-hostname ${hostname}.${dns_domain_name}
 #
 apt-get update -y
 apt-get install unattended-upgrades -y
-
+unattended-upgrade -d -v
