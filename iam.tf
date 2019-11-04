@@ -45,7 +45,7 @@ resource "aws_iam_role_policy_attachment" "bastion_attach_ec2_policy" {
 # ---------------------------------
 resource "aws_iam_role_policy_attachment" "bastion_attach_ssm_policy" {
   role       = aws_iam_role.bastion_role.name
-  policy_arn = arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 }
 
 # ------------------
