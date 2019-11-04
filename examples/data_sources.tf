@@ -1,17 +1,18 @@
 # ---------------------------------------------------
-# Find latest Ubuntu AMI in US-EAST-1
+# Find latest Amazon Linux AMI in US-EAST-2
 # ---------------------------------------------------
-data "aws_ami" "ubuntuserver_ami_useast1" {
+data "aws_ami" "latest_amazon_linux_ami_useast2" {
   most_recent = true
 
   #
-  # 099720109477 - https://www.canonical.com/
+  # 137112412989 - AWS
   # Beware of using anything other than this
   #
-  owners = ["099720109477"]
+  owners = ["137112412989"]
 
   filter {
     name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-*"]
+    values = ["amzn2-ami-hvm-2.0.*-x86_64-gp2"]
   }
 }
+
