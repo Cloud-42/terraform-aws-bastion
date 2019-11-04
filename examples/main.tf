@@ -7,7 +7,7 @@ module "bastion" {
 
   environment         = "prod"
   key_name            = "ec2_key"
-  image_id            = "${data.aws_ami.ubuntuserver_ami_useast1.id}"
+  image_id            = data.aws_ami.ubuntuserver_ami_useast1.id
   orchestration       = "https://github.com/build"
   vpc_zone_identifier = "subnet-xyxyxyx"
   security_groups     = "sg-xyxyxyxyzz"
