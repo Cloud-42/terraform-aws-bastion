@@ -13,7 +13,7 @@ resource "aws_autoscaling_group" "bastion" {
 
   tag {
     key                 = "Name"
-    value               = "${var.environment}_bastion_asg"
+    value               = "${var.environment}-bastion-asg"
     propagate_at_launch = "true"
   }
 
