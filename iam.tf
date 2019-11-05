@@ -40,14 +40,6 @@ resource "aws_iam_role_policy_attachment" "bastion_attach_ec2_policy" {
   policy_arn = aws_iam_policy.bastion_policy.arn
 }
 
-# --------------------------------- 
-# Attach default SSM IAM policy
-# ---------------------------------
-resource "aws_iam_role_policy_attachment" "bastion_attach_ssm_policy" {
-  role       = aws_iam_role.bastion_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMFullAccess"
-}
-
 # ------------------
 # Bastion IAM Policy
 # ------------------
