@@ -140,7 +140,11 @@ resource "aws_iam_policy" "bastion_policy" {
                 "ssm:ListTagsForResource",
                 "ssm:DescribeDocumentParameters",
                 "ssm:ListAssociations",
-                "ssm:DescribeAvailablePatches"
+                "ssm:DescribeAvailablePatches",
+                "ssmmessages:OpenControlChannel",
+                "ssmmessages:OpenDataChannel",
+                "ssmmessages:CreateControlChannel",
+                "ssmmessages:CreateDataChannel"
             ],
             "Resource": "*"
         }
