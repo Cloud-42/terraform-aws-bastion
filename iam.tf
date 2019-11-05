@@ -40,6 +40,21 @@ resource "aws_iam_role_policy_attachment" "bastion_attach_ec2_policy" {
   policy_arn = aws_iam_policy.bastion_policy.arn
 }
 
+# ---------------------------------
+# Attach default s3 RO Policy to Role
+# ---------------------------------
+resource "aws_iam_role_policy_attachment" "bastion_attach_ec2_policy" {
+  role       = aws_iam_role.bastion_role.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+}
+# ---------------------------------
+# Attach default CodeDeploy Policy to Role
+# ---------------------------------
+resource "aws_iam_role_policy_attachment" "bastion_attach_ec2_policy" {
+  role       = aws_iam_role.bastion_role.name
+  policy_arn = "arn:aws:iam::aws:policy/AWSCodeDeployFullAccess"
+}
+
 # ------------------
 # Bastion IAM Policy
 # ------------------
