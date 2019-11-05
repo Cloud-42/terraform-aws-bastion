@@ -1,9 +1,13 @@
 #!/bin/sh
 #
-# Setup Python and AWSCLI
+# Vars
 #
-apt-get install python -y
-apt-get update && apt-get install awscli -y
+AWS_REGION=us-east-2
+#
+# Setup AWSCLI
+# Assumption is that awscli is available via yum repo.
+#
+yum install awscli -y
 #
 # Setup DNS record update
 #
@@ -21,8 +25,13 @@ aws route53 change-resource-record-sets --hosted-zone-id ${hosted_zone_id} --cha
 hostname ${hostname}.${dns_domain_name}
 hostnamectl set-hostname ${hostname}.${dns_domain_name}
 #
+# Install CodeDeploy agent
+#
+yum install -y ruby
+wget https://aws-codedeploy-$AWS_REGION.s3.amazonaws.com/latest/install
+chmod +x ./install
+./install auto
+#
 # Patch host
 #
-apt-get update -y
-apt-get install unattended-upgrades -y
-unattended-upgrade -d -v
+yum update -y
