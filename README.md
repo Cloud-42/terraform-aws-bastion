@@ -13,7 +13,7 @@ Creates an auto-scaled, self healing, Bastion server for use in AWS. The Bastion
 
 ##### Current supported Operating Systems:
 
- * Centos 7 
+ * Amazon Linux 2 
 
 ##### Assumptions:
 
