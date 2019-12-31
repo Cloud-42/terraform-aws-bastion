@@ -1,3 +1,7 @@
+variable "region" {
+  description = "AWS region"
+}
+
 variable "alarm_topic_arn" {
   description = "Topic ARN to send ASG event notifcations to"
   default     = ""

@@ -30,6 +30,7 @@ data "template_file" "user_data" {
   template = file("${path.module}/userdata.sh")
 
   vars = {
+    region          = var.region
     hostname        = var.hostname
     dns_domain_name = var.dns_domain_name
     hosted_zone_id  = var.hosted_zone_id

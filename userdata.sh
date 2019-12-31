@@ -2,7 +2,7 @@
 #
 # Vars
 #
-AWS_REGION=us-east-2
+AWS_REGION=${region}
 #
 # Setup AWSCLI
 # Assumption is that awscli is available via yum repo.
