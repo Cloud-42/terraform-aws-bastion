@@ -119,3 +119,9 @@ variable "iam_policies" {
   description = "List of additional IAM policies to assign to the Bastion"
   default     = null
 }
+
+variable "tags" {
+  description = "Tags to assign"
+  type        = map(string)
+  default     = null
+}
