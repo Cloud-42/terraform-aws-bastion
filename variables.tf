@@ -115,7 +115,7 @@ variable "vpc_zone_identifier" {
 }
 
 variable "iam_policies" {
-  type        = any
+  type        = map(string)
   description = "List of additional IAM policies to assign to the Bastion"
   default     = {}
 }
