@@ -13,6 +13,7 @@ resource "aws_launch_configuration" "bastion" {
 
   # Setup root block device
   root_block_device {
+    encrypted   = var.encrypted
     volume_size = var.volume_size
     volume_type = var.volume_type
   }
