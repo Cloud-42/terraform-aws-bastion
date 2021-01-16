@@ -23,9 +23,12 @@ resource "aws_autoscaling_group" "bastion" {
 
   dynamic "instance_refresh" {
     for_each var.instance_refresh
+    
+    content {
     preferences {
       min_healthy_percentage = each.value.min_healthy_percentage
     }
     triggers = each.value.triggers
-  }
+    }
+    }
 }
