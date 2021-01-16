@@ -131,3 +131,9 @@ variable "encrypted" {
   description = "Encrypt root volume"
   default  = true
 }
+
+variable "custom_userdata" {
+  description = "Set custom userdata"
+  type        = string
+  default     = ""
+}
