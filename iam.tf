@@ -81,7 +81,7 @@ resource "aws_iam_role_policy_attachment" "bastion_additional_policies" {
   for_each = var.iam_policies
 
   role       = aws_iam_role.bastion_role.name
-  policy_arn = var.iam_policies
+  policy_arn = each.value
 }
 
 
