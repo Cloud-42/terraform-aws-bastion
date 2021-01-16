@@ -137,9 +137,3 @@ variable "custom_userdata" {
   type        = string
   default     = ""
 }
-
-variable "instance_refresh" {
-  description = "Instance refresh option"
-  type        = any
-  default     = {}
-}

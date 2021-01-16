@@ -20,13 +20,4 @@ resource "aws_autoscaling_group" "bastion" {
       propagate_at_launch = true
     }
   }
-
-  dynamic "instance_refresh" {
-    for_each = var.instance_refresh
-
-    content {
-      strategy = each.key
-      triggers = each.value
-    }
-  }
 }
