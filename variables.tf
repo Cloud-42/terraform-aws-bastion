@@ -140,6 +140,6 @@ variable "custom_userdata" {
 
 variable "instance_refresh" {
   description = "Instance refresh option"
-  type        = map(string)
+  type        = any
   default     = {}
 }
