@@ -20,4 +20,12 @@ resource "aws_autoscaling_group" "bastion" {
       propagate_at_launch = true
     }
   }
+
+  dynamic "instance_refresh" {
+    for_each var.instance_refresh
+    preferences {
+      min_healthy_percentage = each.value.min_healthy_percentage
+    }
+    triggers = each.value.triggers
+  }
 }
