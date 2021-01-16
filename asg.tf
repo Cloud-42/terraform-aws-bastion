@@ -25,6 +25,7 @@ resource "aws_autoscaling_group" "bastion" {
     for_each = var.instance_refresh
     
     content {
+    strategy = each.value.strategy
     preferences {
       min_healthy_percentage = each.value.min_healthy_percentage
     }
