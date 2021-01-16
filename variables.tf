@@ -123,5 +123,5 @@ variable "iam_policies" {
 variable "tags" {
   description = "Tags to assign"
   type        = map(string)
-  default     = null
+  default     = {}
 }
