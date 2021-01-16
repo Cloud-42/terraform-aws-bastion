@@ -1,7 +1,7 @@
 # ---------------------------------------------------
-# Find latest Amazon Linux AMI in US-EAST-2
+# Find latest Amazon Linux AMI
 # ---------------------------------------------------
-data "aws_ami" "latest_amazon_linux_ami_useast2" {
+data "aws_ami" "latest_amazon_linux_ami" {
   most_recent = true
 
   #
