@@ -129,7 +129,7 @@ variable "tags" {
 variable "encrypted" {
   type        = bool
   description = "Encrypt root volume"
-  default  = true
+  default     = true
 }
 
 variable "custom_userdata" {

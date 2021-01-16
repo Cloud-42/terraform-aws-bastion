@@ -22,14 +22,16 @@ resource "aws_autoscaling_group" "bastion" {
   }
 
   dynamic "instance_refresh" {
-    for_each = var.instance_refresh
-    
+    for_each = {
+      for item in var.instance_refresh : item.options => item
+    }
+
     content {
-    strategy = each.value.strategy
-    preferences {
-      min_healthy_percentage = each.value.min_healthy_percentage
+      strategy = each.value.strategy
+      preferences {
+        min_healthy_percentage = each.value.min_healthy_percentage
+      }
+      triggers = each.value.triggers
     }
-    triggers = each.value.triggers
-    }
-    }
+  }
 }
