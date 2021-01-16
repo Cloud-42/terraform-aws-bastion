@@ -27,7 +27,7 @@ resource "aws_autoscaling_group" "bastion" {
     }
 
     content {
-      strategy = each.value.strategy
+      strategy = each.key
       preferences {
         min_healthy_percentage = each.value.min_healthy_percentage
       }
