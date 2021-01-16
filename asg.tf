@@ -22,7 +22,7 @@ resource "aws_autoscaling_group" "bastion" {
   }
 
   dynamic "instance_refresh" {
-    for_each var.instance_refresh
+    for_each = var.instance_refresh
     
     content {
     preferences {
