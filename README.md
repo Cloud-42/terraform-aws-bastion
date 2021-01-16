@@ -27,13 +27,6 @@ Creates an auto-scaled, self healing, Bastion server for use in AWS. The Bastion
 |------|---------|
 | terraform | >= 0.13.2 |
 
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws | n/a |
-| template | n/a |
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
