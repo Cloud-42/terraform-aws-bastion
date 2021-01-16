@@ -26,7 +26,6 @@ resource "aws_autoscaling_group" "bastion" {
 
     content {
       strategy = instance_refresh.key
-      min_healthy_percentage = each.instance_refresh.min_healthy_percentage
       triggers = each.instance_refresh.triggers
     }
   }
