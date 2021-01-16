@@ -25,7 +25,7 @@ resource "aws_autoscaling_group" "bastion" {
     for_each = var.instance_refresh
 
     content {
-      strategy = instance_refresh.key
+      strategy = each.instance_refresh.strategy
       triggers = each.instance_refresh.triggers
     }
   }
