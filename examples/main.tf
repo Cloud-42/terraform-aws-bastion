@@ -18,7 +18,23 @@ module "bastion" {
     policy1 = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
     policy2 = "arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM"
   }
-
   tags = merge(var.tags, { "Name" = "bastion" })
 }
 
+resource "aws_autoscaling_schedule" "scale_down" {
+  scheduled_action_name  = "scale_down"
+  min_size               = 0
+  max_size               = 0
+  desired_capacity       = 0
+  recurrence             = "45 16 * * MON-FRI"
+  autoscaling_group_name = module.bastion.asg_name
+}
+
+resource "aws_autoscaling_schedule" "scale_up" {
+  scheduled_action_name  = "scale_up"
+  min_size               = 1
+  max_size               = 1
+  desired_capacity       = 1
+  recurrence             = "55 8 * * MON-FRI"
+  autoscaling_group_name = module.bastion.asg_name
+}
